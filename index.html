@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Las Crónicas del Año 40 — Vanessa</title>
+
+<script src="https://cdn.tailwindcss.com"></script>
+
+<link rel="stylesheet" href="styles.css">
+
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600&family=Inter:wght@300;400&display=swap" rel="stylesheet">
+
+</head>
+
+<body class="bg-neutral-950 text-neutral-200 overflow-x-hidden">
+
+<!-- PARTÍCULAS -->
+
+<canvas id="particles"></canvas>
+
+<!-- PORTADA -->
+
+<div id="cover" class="cover">
+
+<div class="cover-box">
+
+<h1 class="title">
+Las Crónicas del Año 40
+</h1>
+
+<p class="intro">
+Vanessa,<br>
+en el umbral de tu cuadragésimo año,<br>
+estas crónicas han comenzado a escribirse.<br>
+Cada página contiene un portal hacia un momento aún por vivir.
+</p>
+
+<button onclick="openGrimoire()" class="magic-btn">
+Abrir las Crónicas
+</button>
+
+</div>
+
+</div>
+
+<!-- APP -->
+
+<div id="app" class="hidden">
+
+<header class="header">
+
+<h1 class="header-title">
+Las Crónicas del Año 40 — Vanessa
+</h1>
+
+</header>
+
+<div class="container">
+
+<div id="grid"
+class="grid gap-8 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+</div>
+
+</div>
+
+</div>
+
+<!-- PANEL ADMIN -->
+
+<div id="adminPanel" class="admin hidden">
+
+<button onclick="showAddActivity()" class="admin-add-btn">
+➕ Añadir actividad
+</button>
+
+<button onclick="deactivateAdmin()" class="admin-exit-btn">
+✕ Salir del modo admin
+</button>
+
+<p id="adminStatus" class="admin-status">
+Modo admin activo
+</p>
+
+</div>
+
+<!-- MODAL DETALLE ACTIVIDAD (usuario) -->
+
+<div id="activityModal" class="modal hidden" onclick="closeActivityModal(event)">
+
+<div class="modal-box activity-detail-box">
+
+<button onclick="closeActivityModal()" class="modal-close">✕</button>
+
+<img id="modalImg" src="" alt="" class="modal-img">
+
+<div class="modal-content">
+
+<h2 id="modalTitle" class="modal-title"></h2>
+
+<p id="modalDesc" class="modal-desc"></p>
+
+<p id="modalLocation" class="modal-location"></p>
+
+<button id="modalDownloadBtn" onclick="" class="magic-btn modal-download-btn">
+✦ Descargar vale
+</button>
+
+</div>
+
+</div>
+
+</div>
+
+<!-- MODAL FORMULARIO ADMIN (añadir / editar) -->
+
+<div id="adminFormModal" class="modal hidden" onclick="closeAdminForm(event)">
+
+<div class="modal-box admin-form-box">
+
+<h2 id="adminFormTitle" class="admin-form-heading">Nueva actividad</h2>
+
+<input type="hidden" id="editingId">
+
+<div class="form-group">
+<label class="form-label">Título</label>
+<input id="formTitle" type="text" class="form-input" placeholder="Título de la actividad">
+</div>
+
+<div class="form-group">
+<label class="form-label">Descripción</label>
+<textarea id="formDesc" class="form-input form-textarea" placeholder="Descripción mágica..."></textarea>
+</div>
+
+<div class="form-group">
+<label class="form-label">Ubicación</label>
+<input id="formLocation" type="text" class="form-input" placeholder="Dónde ocurrirá la magia">
+</div>
+
+<div class="form-group">
+<label class="form-label">URL de imagen</label>
+<input id="formImage" type="url" class="form-input" placeholder="https://...">
+</div>
+
+<div class="form-group form-check">
+<label class="form-label check-label">
+<input id="formLocked" type="checkbox" class="form-checkbox">
+Sellado (bloqueado para Vanessa)
+</label>
+</div>
+
+<div class="form-actions">
+<button onclick="submitActivityForm()" class="magic-btn">Guardar</button>
+<button onclick="closeAdminForm()" class="btn-cancel">Cancelar</button>
+</div>
+
+</div>
+
+</div>
+
+<script src="data.js"></script>
+<script src="script.js"></script>
+
+</body>
+</html>

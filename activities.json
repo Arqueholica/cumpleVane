@@ -1,0 +1,34 @@
+[
+{
+"id":"1",
+"title":"El Santuario del Vapor",
+"description":"Un templo oculto donde el tiempo se disuelve entre vapor y silencio.",
+"location":"Spa en Barcelona",
+"image":"https://images.unsplash.com/photo-1544161515-4ab6ce6db874?q=80&w=1200",
+"locked":false
+},
+{
+"id":"2",
+"title":"El Banquete de las Velas",
+"description":"Una mesa iluminada por fuego antiguo y risas por invocar.",
+"location":"Cena especial",
+"image":"https://images.unsplash.com/photo-1414235077428-338989a2e8c0?q=80&w=1200",
+"locked":false
+},
+{
+"id":"3",
+"title":"El Portal del Horizonte",
+"description":"Un lugar donde el cielo y la tierra conspiran para sorprenderte.",
+"location":"Escapada sorpresa",
+"image":"https://images.unsplash.com/photo-1501785888041-af3ef285b470?q=80&w=1200",
+"locked":false
+},
+{
+"id":"4",
+"title":"El Ritual del Brindis",
+"description":"Elixir dorado compartido bajo la conspiración de las estrellas.",
+"location":"Cócteles secretos",
+"image":"https://images.unsplash.com/photo-1470337458703-46ad1756a187?q=80&w=1200",
+"locked":true
+}
+]
