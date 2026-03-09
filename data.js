@@ -38,7 +38,29 @@ const DEFAULT_ACTIVITIES = [
 "location":"EL Museo de Tu Elección",
 "image":" https://images.pexels.com/photos/9818106/pexels-photo-9818106.jpeg",
 "locked":false
+},
+  "id":"6",
+"title":"",
+"description":"",
+"location":"",
+"image":"",
+"locked":true
+},
+"id":"7",
+"title":"",
+"description":"",
+"location":"",
+"image":"",
+"locked":true
+},
+"id":"8",
+"title":"",
+"description":"",
+"location":"",
+"image":" ",
+"locked":true
 }
 ];
+
 
 
