@@ -63,6 +63,18 @@ ${activity.locked ? "🔓" : "🔒"}
 
 }
 
+if(activity.locked && !adminMode){
+
+card.innerHTML = `
+<img src="https://images.pexels.com/photos/5425653/pexels-photo-5425653.jpeg" alt="Carta sellada">
+<div class="sealed-label">
+<p class="sealed-icon">✧</p>
+<p class="sealed-text">Sellado</p>
+</div>
+`;
+
+} else {
+
 card.innerHTML = `
 
 ${adminControls}
@@ -84,13 +96,15 @@ ${activity.description}
 </p>
 
 ${
-!activity.locked && !adminMode
+!adminMode
 ? `<p class="text-xs text-amber-400 mt-2">Toca para abrir ✦</p>`
 : ""
 }
 
 </div>
 `;
+
+}
 
 grid.appendChild(card);
 

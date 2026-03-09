@@ -153,25 +153,43 @@ opacity: 1;
 }
 
 .locked{
-filter: brightness(.35);
+cursor: default !important;
 }
 
-.locked::after{
+.locked img{
+filter: sepia(.4) brightness(.7);
+}
 
-content: "✧ Sellado ✧";
+.sealed-label{
 
 position: absolute;
+bottom: 24px;
+left: 0;
+right: 0;
 
-top: 50%;
-left: 50%;
+text-align: center;
+pointer-events: none;
 
-transform: translate(-50%, -50%);
+}
 
+.sealed-icon{
+
+font-size: 36px;
 color: #fbbf24;
+text-shadow: 0 0 12px rgba(251,191,36,.5);
+
+margin-bottom: 4px;
+
+}
+
+.sealed-text{
 
 font-family: Cinzel;
-
-pointer-events: none;
+font-size: 14px;
+color: #fbbf24;
+letter-spacing: .15em;
+text-transform: uppercase;
+text-shadow: 0 0 8px rgba(251,191,36,.4);
 
 }
 
