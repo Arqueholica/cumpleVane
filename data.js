@@ -5,7 +5,7 @@ const DEFAULT_ACTIVITIES = [
 "description":"Una tarde involvidable en la piscina de Yolanda, donde el sol se mezcla con risas y chapuzones.",
 "location":"Pallejà, Barcelona",
 "image":"https://images.pexels.com/photos/9872701/pexels-photo-9872701.jpeg?_gl=1*dv66c*_ga*MTYwMTc1NDEzLjE3NzI4MjQzNzQ.*_ga_8JE65Q40S6*czE3NzMwODE4ODckbzIkZzEkdDE3NzMwODE5NTkkajQ5JGwwJGgw",
-"locked":false
+"locked":true
 },
 {
 "id":"2",
@@ -21,13 +21,14 @@ const DEFAULT_ACTIVITIES = [
 "description":"El invento definitico para las apasionadas de los desayunos (¡y no miramos a nadie!)",
 "location":"El Local de Tus Sueños",
 "image":"https://images.pexels.com/photos/2543270/pexels-photo-2543270.jpeg?_gl=1*mzoh2h*_ga*MTYwMTc1NDEzLjE3NzI4MjQzNzQ.*_ga_8JE65Q40S6*czE3NzMwODE4ODckbzIkZzEkdDE3NzMwODMzOTUkajQ2JGwwJGgw",
-"locked":true
+"locked":false
 },
 {
 "id":"4",
 "title":"Tie or Dye",
 "description":"Nada como un taller de tie-dye para ponernos creativas",
 "image":"https://www.parents.com/thmb/5EQpFRvMKZqxmBX8s_gbU0F9lSM=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/GettyImages-175321610-2000-c1b3642f63fb479797a13ce531af93d9.jpg",
-"locked":false
+"locked":true
 }
 ];
+
