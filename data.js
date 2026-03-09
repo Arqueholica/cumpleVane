@@ -31,7 +31,7 @@ const DEFAULT_ACTIVITIES = [
 "image":"https://www.parents.com/thmb/5EQpFRvMKZqxmBX8s_gbU0F9lSM=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/GettyImages-175321610-2000-c1b3642f63fb479797a13ce531af93d9.jpg",
 "locked":true
 },
-  {
+{
 "id":"5",
 "title":"Un día en el Museo",
 "description":"¿Cuántos museos nos quedan por visitar? ¡Empezemos a reducir la lista!",
@@ -39,13 +39,15 @@ const DEFAULT_ACTIVITIES = [
 "image":" https://images.pexels.com/photos/9818106/pexels-photo-9818106.jpeg",
 "locked":false
 },
-  "id":"6",
+{  
+"id":"6",
 "title":"",
 "description":"",
 "location":"",
 "image":"",
 "locked":true
 },
+{
 "id":"7",
 "title":"",
 "description":"",
@@ -53,6 +55,7 @@ const DEFAULT_ACTIVITIES = [
 "image":"",
 "locked":true
 },
+{
 "id":"8",
 "title":"",
 "description":"",
@@ -61,6 +64,7 @@ const DEFAULT_ACTIVITIES = [
 "locked":true
 }
 ];
+
 
 
 
