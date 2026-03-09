@@ -1,39 +1,44 @@
 const DEFAULT_ACTIVITIES = [
-
 {
-id: "1",
-title: "La Piscina de Yolanda",
-description: "Una tarde involvidable en la piscina de Yolanda, donde el sol se mezcla con risas y chapuzones.",
-location: "Pallejà, Barcelona",
-image: "https://images.pexels.com/photos/9872701/pexels-photo-9872701.jpeg?_gl=1*dv66c*_ga*MTYwMTc1NDEzLjE3NzI4MjQzNzQ.*_ga_8JE65Q40S6*czE3NzMwODE4ODckbzIkZzEkdDE3NzMwODE5NTkkajQ5JGwwJGgw",
-locked: false
+"id":"1",
+"title":"La Piscina de Yolanda",
+"description":"Una tarde involvidable en la piscina de Yolanda, donde el sol se mezcla con risas y chapuzones.",
+"location":"Pallejà, Barcelona",
+"image":"https://images.pexels.com/photos/9872701/pexels-photo-9872701.jpeg?_gl=1*dv66c*_ga*MTYwMTc1NDEzLjE3NzI4MjQzNzQ.*_ga_8JE65Q40S6*czE3NzMwODE4ODckbzIkZzEkdDE3NzMwODE5NTkkajQ5JGwwJGgw",
+"locked":true
 },
-
 {
-id: "2",
-title: "El Misterio del Tarot del Tardeo",
-description: "¿Tenemos un destino escrito en las cartas... o en el fondo del vaso? ¡Descubrámoslo juntas!",
-location: "Donde las cartas nos lleven",
-image: "https://images.pexels.com/photos/3088369/pexels-photo-3088369.jpeg?_gl=1*2zc2te*_ga*MTYwMTc1NDEzLjE3NzI4MjQzNzQ.*_ga_8JE65Q40S6*czE3NzMwODE4ODckbzIkZzEkdDE3NzMwODIwNzEkajQ0JGwwJGgw",
-locked: false
+"id":"2",
+"title":"El Misterio del Tarot del Tardeo",
+"description":"¿Tenemos un destino escrito en las cartas... o en el fondo del vaso? ¡Descubrámoslo juntas!",
+"location":"Donde las cartas nos lleven",
+"image":"https://images.pexels.com/photos/3088369/pexels-photo-3088369.jpeg?_gl=1*2zc2te*_ga*MTYwMTc1NDEzLjE3NzI4MjQzNzQ.*_ga_8JE65Q40S6*czE3NzMwODE4ODckbzIkZzEkdDE3NzMwODIwNzEkajQ0JGwwJGgw",
+"locked":false
 },
-
 {
-id: "3",
-title: "Tie or Dye",
-description: "Nada como un taller de tie-dye para ponernos creativas",
-location: "",
-image: "https://www.parents.com/thmb/5EQpFRvMKZqxmBX8s_gbU0F9lSM=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/GettyImages-175321610-2000-c1b3642f63fb479797a13ce531af93d9.jpg",
-locked: false
+"id":"3",
+"title":"Un Brunch para Recordar",
+"description":"El invento definitico para las apasionadas de los desayunos (¡y no miramos a nadie!)",
+"location":"El Local de Tus Sueños",
+"image":"https://images.pexels.com/photos/2543270/pexels-photo-2543270.jpeg?_gl=1*mzoh2h*_ga*MTYwMTc1NDEzLjE3NzI4MjQzNzQ.*_ga_8JE65Q40S6*czE3NzMwODE4ODckbzIkZzEkdDE3NzMwODMzOTUkajQ2JGwwJGgw",
+"locked":false
 },
-
 {
-id: "4",
-title: "El Ritual del Brindis",
-description: "Elixir dorado compartido bajo la conspiración de las estrellas.",
-location: "Cócteles secretos",
-image: "https://images.unsplash.com/photo-1470337458703-46ad1756a187?q=80&w=1200",
-locked: true
+"id":"4",
+"title":"Tie or Dye",
+"description":"Nada como un taller de tie-dye para ponernos creativas",
+"location":"El Espacio Disponible",
+"image":"https://www.parents.com/thmb/5EQpFRvMKZqxmBX8s_gbU0F9lSM=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/GettyImages-175321610-2000-c1b3642f63fb479797a13ce531af93d9.jpg",
+"locked":true
+},
+  {
+"id":"5",
+"title":"Un día en el Museo",
+"description":"¿Cuántos museos nos quedan por visitar? ¡Empezemos a reducir la lista!",
+"location":"EL Museo de Tu Elección",
+"image":" https://images.pexels.com/photos/9818106/pexels-photo-9818106.jpeg",
+"locked":false
 }
-
 ];
+
+
