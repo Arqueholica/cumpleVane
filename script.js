@@ -273,95 +273,233 @@ function downloadVoucher(id){
 
 const activity = activities.find(a => a.id === id);
 
-const canvas = document.createElement("canvas");
-canvas.width = 800;
-canvas.height = 1200;
+/* canvas */
 
-const ctx = canvas.getContext("2d");
+const voucherCanvas = document.createElement("canvas");
 
-/* fondo pergamino */
+voucherCanvas.width = 900;
+voucherCanvas.height = 1400;
 
-const gradient = ctx.createLinearGradient(0, 0, 0, 1200);
+const vctx = voucherCanvas.getContext("2d");
 
-gradient.addColorStop(0, "#f8f1d4");
-gradient.addColorStop(.5, "#efe2b8");
-gradient.addColorStop(1, "#e5d6a5");
+/* =========================
+   FONDO PERGAMINO
+========================= */
 
-ctx.fillStyle = gradient;
-ctx.fillRect(0, 0, 800, 1200);
+const gradient = vctx.createLinearGradient(0,0,0,1400);
+
+gradient.addColorStop(0,"#f6edd1");
+gradient.addColorStop(.45,"#e8d8aa");
+gradient.addColorStop(1,"#d8c08a");
+
+vctx.fillStyle = gradient;
+vctx.fillRect(0,0,900,1400);
 
 /* textura */
 
-for(let i = 0; i < 5000; i++){
-ctx.fillStyle = "rgba(0,0,0,.03)";
-ctx.fillRect(Math.random() * 800, Math.random() * 1200, 1, 1);
+for(let i=0;i<9000;i++){
+
+vctx.fillStyle = "rgba(0,0,0,.025)";
+
+vctx.fillRect(
+Math.random()*900,
+Math.random()*1400,
+1,
+1
+);
+
 }
 
-/* borde */
+/* viñeta */
 
-ctx.strokeStyle = "#6b4f2a";
-ctx.lineWidth = 8;
-ctx.strokeRect(30, 30, 740, 1140);
+const vignette = vctx.createRadialGradient(
+450,700,300,
+450,700,900
+);
 
-/* texto */
+vignette.addColorStop(0,"rgba(0,0,0,0)");
+vignette.addColorStop(1,"rgba(0,0,0,.18)");
 
-ctx.textAlign = "center";
-ctx.fillStyle = "#3b2a17";
+vctx.fillStyle = vignette;
+vctx.fillRect(0,0,900,1400);
 
-ctx.font = "42px Cinzel";
-ctx.fillText("Las Crónicas del Año 40", 400, 140);
+/* =========================
+   BORDES
+========================= */
 
-ctx.font = "28px Cinzel";
-ctx.fillText("Vale de experiencia", 400, 210);
+vctx.strokeStyle = "#6b4f2a";
+vctx.lineWidth = 10;
 
-ctx.font = "34px Cinzel";
-ctx.fillText(activity.title, 400, 380);
+vctx.strokeRect(35,35,830,1330);
 
-ctx.font = "22px serif";
-wrapText(ctx, activity.description, 400, 470, 520, 32);
+vctx.strokeStyle = "#b08b4f";
+vctx.lineWidth = 2;
 
-ctx.font = "20px serif";
-ctx.fillText("Portadora del vale:", 400, 650);
+vctx.strokeRect(55,55,790,1290);
 
-ctx.font = "28px Cinzel";
-ctx.fillText("Vanessa", 400, 700);
+/* =========================
+   TÍTULO
+========================= */
 
-ctx.font = "20px serif";
-ctx.fillText("Ubicación: " + activity.location, 400, 820);
+vctx.textAlign = "center";
 
-ctx.font = "24px Cinzel";
-ctx.fillText("✧ Sello del Grimorio ✧", 400, 1000);
+vctx.fillStyle = "#3b2a17";
+
+vctx.font = "50px Cinzel";
+
+vctx.fillText(
+"Las Crónicas del Año 40",
+450,
+150
+);
+
+vctx.font = "28px Cinzel";
+
+vctx.fillText(
+"Vale de experiencia",
+450,
+220
+);
+
+/* línea ornamental */
+
+vctx.beginPath();
+
+vctx.moveTo(260,270);
+vctx.lineTo(640,270);
+
+vctx.strokeStyle = "#b08b4f";
+vctx.lineWidth = 2;
+
+vctx.stroke();
+
+/* =========================
+   IMAGEN ACTIVIDAD
+========================= */
+
+const activityImg = new Image();
+
+activityImg.crossOrigin = "anonymous";
+activityImg.src = activity.image;
+
+activityImg.onload = () => {
+
+vctx.save();
+
+/* marco imagen */
+
+vctx.fillStyle = "#2b1d0f";
+
+vctx.fillRect(200,320,500,280);
+
+vctx.drawImage(
+activityImg,
+215,
+335,
+470,
+250
+);
+
+vctx.restore();
+
+/* =========================
+   NOMBRE ACTIVIDAD
+========================= */
+
+vctx.fillStyle = "#3b2a17";
+
+vctx.font = "40px Cinzel";
+
+vctx.fillText(
+activity.title,
+450,
+700
+);
+
+/* descripción */
+
+vctx.font = "24px serif";
+
+wrapText(
+vctx,
+activity.description,
+450,
+790,
+560,
+38
+);
+
+/* =========================
+   INFO
+========================= */
+
+vctx.font = "22px serif";
+
+vctx.fillText(
+"Portadora del vale",
+450,
+980
+);
+
+vctx.font = "36px Cinzel";
+
+vctx.fillText(
+"Vanessa",
+450,
+1040
+);
+
+vctx.font = "22px serif";
+
+vctx.fillText(
+activity.location,
+450,
+1120
+);
+
+/* =========================
+   SELLO REAL
+========================= */
+
+const seal = new Image();
+
+seal.src = "assets/seal.jpg";
+
+seal.onload = () => {
+
+vctx.save();
+
+vctx.globalAlpha = .92;
+
+vctx.shadowColor = "rgba(251,191,36,.35)";
+vctx.shadowBlur = 20;
+
+vctx.drawImage(
+seal,
+315,
+1160,
+270,
+270
+);
+
+vctx.restore();
+
+/* descarga */
 
 const link = document.createElement("a");
-link.download = "vale_" + activity.title + ".png";
-link.href = canvas.toDataURL();
+
+link.download =
+"vale_" + activity.title + ".png";
+
+link.href =
+voucherCanvas.toDataURL("image/png");
+
 link.click();
 
-}
+};
 
-function wrapText(ctx, text, x, y, maxWidth, lineHeight){
+};
 
-const words = text.split(" ");
-let line = "";
-
-for(let n = 0; n < words.length; n++){
-
-const testLine = line + words[n] + " ";
-const metrics = ctx.measureText(testLine);
-
-if(metrics.width > maxWidth && n > 0){
-ctx.fillText(line, x, y);
-line = words[n] + " ";
-y += lineHeight;
-} else {
-line = testLine;
-}
-
-}
-
-ctx.fillText(line, x, y);
-
-}
 
 /* =====================
    ADMIN MODE
