@@ -17,9 +17,14 @@ localStorage.setItem("activities", JSON.stringify(activities));
 ===================== */
 
 function openGrimoire(){
-document.getElementById("cover").style.display = "none";
-document.getElementById("app").classList.remove("hidden");
+
+document.getElementById("cover").remove();
+
+document.getElementById("app")
+.classList.remove("hidden");
+
 renderActivities();
+
 }
 
 /* =====================
