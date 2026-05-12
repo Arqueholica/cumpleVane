@@ -550,26 +550,3 @@ requestAnimationFrame(drawParticles);
 }
 
 drawParticles();
-```
-
----
-
-# IMPORTANTE
-
-Tu imagen `cronicas.png` debe ser:
-
-```plaintext
-/project
-   ├── index.html
-   ├── styles.css
-   ├── script.js
-   ├── cronicas.png
-```
-
-Y ahora:
-
-* el sello ya no tendrá el cuadrado beige
-* las cards usarán el sello integrado
-* el voucher tendrá la nueva estética oscura fantasy
-* el sello del voucher se fundirá con el pergamino
-* todo tendrá coherencia visual
