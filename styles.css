@@ -155,8 +155,8 @@ left: 50%;
 
 transform: translate(-50%, -50%) scale(1.03);
 
-width: 300px;
-height: 300px;
+width: 220px;
+height: 220px;
 
 background-image: url("cronicas.png");
 
@@ -170,14 +170,16 @@ pointer-events: none;
 
 z-index: 5;
 
+/* RECORTE CIRCULAR */
+clip-path: circle(60% at center);
+
+/* integración visual */
 mix-blend-mode: multiply;
 
 filter:
-sepia(.55)
-saturate(.8)
+contrast(1.15)
 brightness(.82)
-contrast(1.05)
-drop-shadow(0 0 12px rgba(251,191,36,.2));
+drop-shadow(0 0 12px rgba(251,191,36,.18));
 
 animation: sealFloat 4s ease-in-out infinite;
 
