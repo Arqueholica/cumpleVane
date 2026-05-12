@@ -17,6 +17,10 @@ filter: blur(0.5px);
 
 }
 
+#app{
+position: relative;
+z-index: 2;
+}
 /* portada */
 
 .cover{
