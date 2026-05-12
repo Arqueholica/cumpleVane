@@ -153,16 +153,17 @@ position: absolute;
 top: 50%;
 left: 50%;
 
-transform: translate(-50%, -50%) scale(1.03);
+transform: translate(-50%, -50%);
 
-width: 220px;
-height: 220px;
+width: 300px;
+height: 300px;
 
-background-image: url("cronicas.png");
 
-background-size: cover;
-background-repeat: no-repeat;
-background-position: center;
+background: url("cronicas.png") center/contain no-repeat;
+
+
+mask-image: radial-gradient(circle, black 58%, transparent 60%);
+-webkit-mask-image: radial-gradient(circle, black 58%, transparent 60%);
 
 opacity: .95;
 
@@ -170,15 +171,7 @@ pointer-events: none;
 
 z-index: 5;
 
-/* RECORTE CIRCULAR */
-clip-path: circle(60% at center);
-
-/* integración visual */
-mix-blend-mode: multiply;
-
 filter:
-contrast(1.15)
-brightness(.82)
 drop-shadow(0 0 12px rgba(251,191,36,.18));
 
 animation: sealFloat 4s ease-in-out infinite;
