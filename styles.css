@@ -160,38 +160,40 @@ cursor: default !important;
 filter: sepia(.4) brightness(.7);
 }
 
-.sealed-label{
+.locked::after{
+
+content: "";
 
 position: absolute;
-bottom: 24px;
-left: 0;
-right: 0;
 
-text-align: center;
+top: 50%;
+left: 50%;
+
+transform: translate(-50%, -50%);
+
+width: 150px;
+height: 150px;
+
+background-image: url("cronicas.png");
+background-size: contain;
+background-repeat: no-repeat;
+background-position: center;
+
+opacity: .95;
+
 pointer-events: none;
 
-}
+z-index: 5;
 
-.sealed-icon{
+  mix-blend-mode: screen;
+  
+filter:
+drop-shadow(0 0 10px rgba(251,191,36,.25));
 
-font-size: 36px;
-color: #fbbf24;
-text-shadow: 0 0 12px rgba(251,191,36,.5);
-
-margin-bottom: 4px;
-
-}
-
-.sealed-text{
-
-font-family: Cinzel;
-font-size: 14px;
-color: #fbbf24;
-letter-spacing: .15em;
-text-transform: uppercase;
-text-shadow: 0 0 8px rgba(251,191,36,.4);
+animation: sealFloat 4s ease-in-out infinite;
 
 }
+
 
 button{
 cursor: pointer;
@@ -541,6 +543,22 @@ display: none;
 }
 
 /* animaciones */
+@keyframes sealFloat{
+
+0%{
+transform: translate(-50%, -50%) scale(1);
+}
+
+50%{
+transform: translate(-50%, -52%) scale(1.03);
+}
+
+100%{
+transform: translate(-50%, -50%) scale(1);
+}
+
+}
+
 
 @keyframes fade{
 
