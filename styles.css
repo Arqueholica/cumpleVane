@@ -159,6 +159,7 @@ width: 220px;
 height: 220px;
 
 background-image: url("cronicas.png");
+
 background-size: contain;
 background-repeat: no-repeat;
 background-position: center;
@@ -172,6 +173,10 @@ z-index: 5;
 mix-blend-mode: multiply;
 
 filter:
+sepia(.55)
+saturate(.8)
+brightness(.82)
+contrast(1.05)
 drop-shadow(0 0 12px rgba(251,191,36,.2));
 
 animation: sealFloat 4s ease-in-out infinite;
